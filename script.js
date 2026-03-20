@@ -7,11 +7,11 @@ const tabBtns = document.querySelectorAll('.tab-btn');
 const tabContents = document.querySelectorAll('.tab-content');
 const navigateBtn = document.getElementById('navigate-btn');
 
-// Affiche le modal
+// Redirige vers l'app
 installBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
-        modal.classList.remove('hidden');
+        window.open('https://nightwatch-app.vercel.app', '_blank');
     });
 });
 
@@ -78,7 +78,7 @@ if (shareBtn) {
         const shareData = {
             title: 'Night Watch – Stay Sharp. Stay Safe.',
             text: 'Découvre Night Watch, l\'app qui rend tes soirées plus sûres avec tes amis 🌙',
-            url: 'https://morganrht.github.io/Landing-Page-NightWatch/'
+            url: 'https://nightwatch-app.vercel.app'
         };
 
         // Web Share API – natif sur iOS Safari & Android Chrome

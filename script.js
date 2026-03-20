@@ -44,7 +44,7 @@ tabBtns.forEach(btn => {
 // Navigation vers l'app
 navigateBtn.addEventListener('click', () => {
     console.log('Redirection vers Night Watch (app réelle)...');
-    window.location.href = 'https://social-glow-meter.lovable.app/';
+    window.location.href = 'https://nightwatch-app.vercel.app';
 });
 
 // Ferme le modal au clic en dehors et avec Escape

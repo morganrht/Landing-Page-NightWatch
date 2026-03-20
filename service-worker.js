@@ -68,8 +68,8 @@ self.addEventListener('fetch', (event) => {
         return;
     }
     
-    // Ignore les requêtes vers l'app réelle (social-glow-meter.lovable.app)
-    if (event.request.url.includes('social-glow-meter.lovable.app')) {
+    // Ignore les requêtes vers l'app réelle (nightwatch-app.vercel.app)
+    if (event.request.url.includes('nightwatch-app.vercel.app')) {
         // Utilise le réseau pour l'app réelle
         event.respondWith(
             fetch(event.request)

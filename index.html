@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e3a8a">
+    <meta name="description" content="Night Watch - Partagez vos soirées en sécurité avec vos amis. Éthylomètre partagé, boutons d'urgence, localisation et bien plus.">
+    <meta name="keywords" content="Night Watch, sécurité, social, soirée, amis, éthylomètre, PWA">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://morganreichert.github.io/nightwatch-landing/">
+    <meta property="og:title" content="Night Watch - Partagez vos soirées en sécurité">
+    <meta property="og:description" content="L'app qui rend vos soirées plus sûres et amusantes avec vos amis">
+    <meta property="og:image" content="./IMG_0831.PNG">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%231e3a8a' width='180' height='180'/><text x='50%' y='50%' font-size='100' fill='white' text-anchor='middle' dy='.3em' font-weight='bold'>NW</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%231e3a8a' width='180' height='180'/><text x='50%' y='50%' font-size='100' fill='white' text-anchor='middle' dy='.3em' font-weight='bold'>NW</text></svg>">
+    
+    <title>Night Watch - Stay Sharp. Stay Safe. 🌙</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <span class="logo">🌙 Night Watch</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Fonctionnalités</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#testimonials">Avis</a></li>
+                <li><a href="#contact" class="btn-primary">Installer</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Partagez vos soirées <span class="gradient-text">en sécurité</span></h1>
+                <p class="hero-subtitle">Stay Sharp. Stay Safe. 🌙</p>
+                <p class="hero-description">Night Watch rend vos soirées plus amusantes et sécurisées avec vos amis. Éthylomètre partagé, boutons d'urgence, localisation, stories et bien plus encore.</p>
+                <button id="install-btn" class="btn-install">📥 Installer Night Watch</button>
+                <p class="install-info">Disponible sur iOS et Android via PWA</p>
+            </div>
+            <div class="hero-visual">
+                <div class="iphone-mockup">
+                    <div class="iphone-frame">
+                        <div class="iphone-screen">
+                            <img src="./IMG_0831.PNG" alt="Night Watch App Interface" class="app-screenshot">
+                        </div>
+                        <div class="iphone-notch"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Tout ce que vous adorez</h2>
+            <p class="section-subtitle">Des fonctionnalités pensées pour vos soirées</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🍷</div>
+                    <h3>Éthylomètre Partagé</h3>
+                    <p>Suivi en temps réel du niveau d'alcool du groupe. Restez lucide ensemble.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚨</div>
+                    <h3>Boutons d'Urgence</h3>
+                    <p>Besoin d'aide? Un seul clic pour alerter vos amis ou les services d'urgence.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📸</div>
+                    <h3>Partage de Stories</h3>
+                    <p>Capturez et partagez vos meilleurs moments avec le groupe en direct.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Localisation en Temps Réel</h3>
+                    <p>Retrouvez facilement tous vos amis sur une carte interactive et sécurisée.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Classement par Soirée</h3>
+                    <p>Gamification ludique pour rendre chaque soirée mémorable et amusante.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Caméra IA (Beta)</h3>
+                    <p>Détection automatique des boissons en quelques secondes. Technologie avancée.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Chat de Groupe</h3>
+                    <p>Communication instantanée avec tous vos amis pour coordonner la soirée.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Historique des Soirées</h3>
+                    <p>Consultez vos statistiques et revivez vos meilleurs moments passés.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Questions Fréquentes</h2>
+            <p class="section-subtitle">Tout ce que vous voulez savoir</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>🔒 Comment mes données sont-elles protégées?</h3>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                            <path d="M6 8l4 4 8-8" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Night Watch respecte scrupuleusement le RGPD. Toutes vos données sont chiffrées de bout en bout. Vos informations de localisation et de consommation restent privées et ne sont partagées qu'avec les amis que vous sélectionnez. Nous n'utilisons jamais vos données à des fins commerciales.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>🍺 Qu'est-ce qu'un éthylomètre partagé?</h3>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                            <path d="M6 8l4 4 8-8" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>C'est une fonctionnalité unique où vous pouvez enregistrer vos consommations d'alcool et celles de vos amis. L'app calcule un niveau de vigilance pour chacun, basé sur vos boissons. Cela aide à responsabiliser le groupe et à prendre soin les uns des autres. Ce n'est pas un jugement, c'est de la bienveillance!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>🆘 Comment fonctionne le système d'urgence?</h3>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                            <path d="M6 8l4 4 8-8" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>En un clic sur le bouton SOS, vos amis présents dans l'app reçoivent une alerte instantanée avec votre localisation. Optionnellement, vous pouvez aussi alerter les services d'urgence locaux. Tous vos amis sont informés pour vous aider rapidement. Votre sécurité est notre priorité.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>📱 Comment installer Night Watch sur mon téléphone?</h3>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                            <path d="M6 8l4 4 8-8" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Night Watch est une Progressive Web App (PWA), ce qui signifie qu'elle fonctionne comme une app native sur iOS et Android. Cliquez sur le bouton "Installer" en haut, puis sur "Ajouter à l'écran d'accueil" ou "Installer l'app". Aucun téléchargement App Store nécessaire!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>🎉 Quel est le but du classement?</h3>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                            <path d="M6 8l4 4 8-8" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Le classement par soirée ajoute une dimension ludique et amusante à vos sorties! Ce n'est jamais un jugement. C'est une façon de gamifier l'expérience, de vous rappeler de bons souvenirs et de créer une saine compétition amicale. À la fin de la soirée, c'est le rire et les bons moments qui comptent!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Ce que disent nos utilisateurs</h2>
+            <p class="section-subtitle">Des avis sincères de la communauté Night Watch</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Night Watch a complètement changé notre façon de sortir. Nous savons tous que tout le monde va bien, et c'est tellement rassurant. Plus jamais de panique pour retrouver quelqu'un!"</p>
+                    <div class="testimonial-author">
+                        <div class="avatar">👨</div>
+                        <div class="author-info">
+                            <p class="author-name">Antoine</p>
+                            <p class="author-location">Paris, France</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"J'adore les stories et le classement! Ça rend chaque soirée plus mémorable. Et franchement, le bouton SOS m'a sauvé la mise une nuit. Merci Night Watch!"</p>
+                    <div class="testimonial-author">
+                        <div class="avatar">👩</div>
+                        <div class="author-info">
+                            <p class="author-name">Marion</p>
+                            <p class="author-location">Lyon, France</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"En tant que parent, je suis tranquille. Ma fille est en sécurité à ses soirées. C'est une app mature qui pense vraiment à la prevention sans être moralisatrice. Bravo!"</p>
+                    <div class="testimonial-author">
+                        <div class="avatar">👨‍🦱</div>
+                        <div class="author-info">
+                            <p class="author-name">Marc</p>
+                            <p class="author-location">Marseille, France</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Prêt à rendre vos soirées plus sûres?</h2>
+            <p>Installez Night Watch maintenant. C'est gratuit, rapide et sécurisé.</p>
+            <button id="install-btn-cta" class="btn-install btn-large">
+                📥 Installer Night Watch maintenant
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>À propos</h4>
+                    <ul>
+                        <li><a href="https://social-glow-meter.lovable.app/">L'app Night Watch</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="mailto:contact@nightwatch.app">Nous contacter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="#">Conditions d'utilisation</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suivez-nous</h4>
+                    <ul class="social-links">
+                        <li><a href="https://instagram.com" target="_blank">📸 Instagram</a></li>
+                        <li><a href="https://twitter.com" target="_blank">𝕏 Twitter</a></li>
+                        <li><a href="https://linkedin.com" target="_blank">💼 LinkedIn</a></li>
+                        <li><a href="mailto:contact@nightwatch.app">📧 Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Night Watch. Stay Sharp. Stay Safe. 🌙</p>
+                <p class="footer-small">PWA Progressive Web App | Fonctionne sur iOS et Android</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./script.js"></script>
+</body>
+</html>

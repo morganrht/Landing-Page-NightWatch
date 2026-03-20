@@ -1,0 +1,78 @@
+{
+  "name": "Night Watch Landing Page",
+  "short_name": "Night Watch",
+  "description": "Landing page officielle de Night Watch - L'app qui rend vos soirées plus sûres et amusantes.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#1e3a8a",
+  "prefer_related_applications": false,
+  "categories": ["social", "lifestyle", "utilities"],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 720'><rect fill='%231e3a8a' width='540' height='720'/><text x='270' y='360' font-size='60' fill='white' text-anchor='middle' dy='.3em' font-weight='bold'>Night Watch</text></text></svg>",
+      "sizes": "540x720",
+      "type": "image/svg+xml",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 720'><rect fill='%231e3a8a' width='1280' height='720'/><text x='640' y='360' font-size='80' fill='white' text-anchor='middle' dy='.3em' font-weight='bold'>Night Watch</text></svg>",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide"
+    }
+  ],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%231e3a8a' width='192' height='192' rx='45'/><text x='96' y='96' font-size='120' fill='white' text-anchor='middle' dy='.35em' font-weight='bold'>NW</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%231e3a8a' width='192' height='192' rx='45'/><text x='96' y='96' font-size='120' fill='white' text-anchor='middle' dy='.35em' font-weight='bold'>NW</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect fill='%231e3a8a' width='512' height='512' rx='120'/><text x='256' y='256' font-size='320' fill='white' text-anchor='middle' dy='.35em' font-weight='bold'>NW</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Accueil Night Watch",
+      "short_name": "Accueil",
+      "description": "Ouvre l'app Night Watch directement",
+      "url": "https://social-glow-meter.lovable.app/",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%231e3a8a' width='192' height='192' rx='45'/><text x='96' y='96' font-size='120' fill='white' text-anchor='middle' dy='.35em' font-weight='bold'>NW</text></svg>",
+          "sizes": "192x192",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "https://social-glow-meter.lovable.app/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "media",
+          "accept": ["image/*", "video/*"]
+        }
+      ]
+    }
+  }
+}

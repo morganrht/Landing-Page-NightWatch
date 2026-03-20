@@ -1,39 +1,58 @@
-// ==================== PWA INSTALLATION ==================== 
-
-// Stratégie simple et directe:
-// Quand utilisateur clique "Install", on ouvre l'app réelle
-// L'app réelle (social-glow-meter.lovable.app) montrera son PROPRE prompt d'installation PWA
+// ==================== PWA INSTALLATION MODAL ==================== 
 
 const installBtns = document.querySelectorAll('#install-btn, #install-btn-cta');
+const modal = document.getElementById('install-modal');
+const modalClose = document.getElementById('modal-close');
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+const navigateBtn = document.getElementById('navigate-btn');
 
-// Quand utilisateur clique le bouton "Install"
+// Affiche le modal
 installBtns.forEach(btn => {
-    btn.addEventListener('click', async (e) => {
+    btn.addEventListener('click', (e) => {
         e.preventDefault();
-        
-        // Ouvre l'app réelle qui propose son propre prompt PWA
-        openNightWatchApp();
-        
-        // Change le texte du bouton (feedback utilisateur)
-        const originalText = btn.textContent;
-        btn.textContent = '⏳ Ouverture de Night Watch...';
-        
-        setTimeout(() => {
-            btn.textContent = originalText;
-        }, 2000);
+        modal.classList.remove('hidden');
     });
 });
 
-/**
- * Ouvre l'app Night Watch réelle via redirection directe
- * L'app Lovable affichera son propre prompt d'installation PWA une fois chargée
- */
-function openNightWatchApp() {
-    console.log('Redirection vers Night Watch (app réelle)...');
-    
-    // Redirection directe pour permettre à l'app de proposer son prompt PWA
-    window.location.href = 'https://social-glow-meter.lovable.app/';
+// Ferme le modal
+function closeModal() {
+    modal.classList.add('hidden');
 }
+
+modalClose.addEventListener('click', closeModal);
+modal.addEventListener('click', (e) => {
+    if (e.target === modal.querySelector('.modal-overlay')) {
+        closeModal();
+    }
+});
+
+// Gère les onglets du modal
+tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Retire la classe active de tous les boutons et contenus
+        tabBtns.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+        
+        // Ajoute la classe active au bouton et contenu cliqués
+        btn.classList.add('active');
+        const tabId = btn.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+    });
+});
+
+// Navigation vers l'app
+navigateBtn.addEventListener('click', () => {
+    console.log('Redirection vers Night Watch (app réelle)...');
+    window.location.href = 'https://social-glow-meter.lovable.app/';
+});
+
+// Ferme le modal au clic en dehors et avec Escape
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeModal();
+    }
+});
 
 // ==================== SERVICE WORKER REGISTRATION ==================== 
 

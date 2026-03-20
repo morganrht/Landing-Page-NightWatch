@@ -279,6 +279,61 @@
         </div>
     </footer>
 
+    <!-- Installation Modal -->
+    <div id="install-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-download"></i> Installer Night Watch</h2>
+                <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="install-tabs">
+                    <button class="tab-btn active" data-tab="ios"><i class="fab fa-apple"></i> iOS</button>
+                    <button class="tab-btn" data-tab="android"><i class="fab fa-android"></i> Android</button>
+                    <button class="tab-btn" data-tab="navigate"><i class="fas fa-arrow-right"></i> Continuer</button>
+                </div>
+
+                <!-- iOS Instructions -->
+                <div class="tab-content active" id="ios">
+                    <h3>Installation sur iPhone/iPad</h3>
+                    <ol class="instruction-list">
+                        <li>Appuyez sur le bouton <strong>Partage</strong> <i class="fas fa-share-nodes"></i> en bas</li>
+                        <li>Faites défiler vers le bas et appuyez sur <strong>"Sur l'écran d'accueil"</strong></li>
+                        <li>Appuyez sur <strong>"Ajouter"</strong> en haut à droite</li>
+                        <li>Night Watch apparaît immédiatement sur votre home screen! 🎉</li>
+                    </ol>
+                    <div class="info-box">
+                        <p><i class="fas fa-info-circle"></i> <strong>Safari uniquement</strong> pour iOS. Assurez-vous d'utiliser Safari.</p>
+                    </div>
+                </div>
+
+                <!-- Android Instructions -->
+                <div class="tab-content" id="android">
+                    <h3>Installation sur Android</h3>
+                    <ol class="instruction-list">
+                        <li>Appuyez sur le menu <i class="fas fa-bars"></i> (3 points) en haut à droite</li>
+                        <li>Sélectionnez <strong>"Installer l'app"</strong></li>
+                        <li>Appuyez sur <strong>"Installer"</strong> dans la popup</li>
+                        <li>Night Watch s'installe automatiquement sur votre écran d'accueil! 🎉</li>
+                    </ol>
+                    <div class="info-box">
+                        <p><i class="fas fa-info-circle"></i> <strong>Chrome, Firefox ou Edge</strong> recommandé pour une meilleure expérience.</p>
+                    </div>
+                </div>
+
+                <!-- Navigate -->
+                <div class="tab-content" id="navigate">
+                    <h3>Accéder à Night Watch</h3>
+                    <p>Continuez vers l'app Night Watch et suivez les instructions pour votre plateforme.</p>
+                    <button id="navigate-btn" class="btn-primary" style="width: 100%; padding: 12px; margin-top: 20px;">
+                        <i class="fas fa-arrow-right"></i> Aller à Night Watch
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="./script.js"></script>
 </body>

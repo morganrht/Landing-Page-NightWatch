@@ -25,19 +25,14 @@ installBtns.forEach(btn => {
 });
 
 /**
- * Ouvre l'app Night Watch réelle
- * L'app affichera son propre prompt d'installation PWA
+ * Ouvre l'app Night Watch réelle via redirection directe
+ * L'app Lovable affichera son propre prompt d'installation PWA une fois chargée
  */
 function openNightWatchApp() {
-    console.log('Ouverture de Night Watch (app réelle)...');
+    console.log('Redirection vers Night Watch (app réelle)...');
     
-    // Ouvre dans un nouvel onglet - meilleure UX
-    const appWindow = window.open('https://social-glow-meter.lovable.app/', '_blank', 'noopener,noreferrer');
-    
-    if (!appWindow) {
-        // Si popup bloquée, redirection classique
-        window.location.href = 'https://social-glow-meter.lovable.app/';
-    }
+    // Redirection directe pour permettre à l'app de proposer son prompt PWA
+    window.location.href = 'https://social-glow-meter.lovable.app/';
 }
 
 // ==================== SERVICE WORKER REGISTRATION ==================== 

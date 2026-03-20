@@ -2,7 +2,7 @@
 // Version: 1.0.0
 // Provides: Offline support, Cache management, background sync
 
-const CACHE_VERSION = 'v1';
+const CACHE_VERSION = 'v2';
 const CACHE_NAME = `nightwatch-landing-${CACHE_VERSION}`;
 
 // Liste des fichiers à mettre en cache au premier accès

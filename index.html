@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#05070E">
     <meta name="description" content="Night Watch - Partagez vos soirées en sécurité avec vos amis. Éthylomètre partagé, boutons d'urgence, localisation et bien plus.">
     <meta name="keywords" content="Night Watch, sécurité, social, soirée, amis, éthylomètre, PWA">
     
@@ -23,12 +23,24 @@
     
     <title>Night Watch - Stay Sharp. Stay Safe. 🌙</title>
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons (CDN Public - Free) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <!-- Background Orbs -->
+    <div class="bg-orbs" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -48,6 +60,7 @@
     <section class="hero" id="hero">
         <div class="container hero-container">
             <div class="hero-content">
+                <span class="hero-eyebrow"><i class="fas fa-circle-dot"></i> Disponible maintenant</span>
                 <h1 class="hero-title">Partagez vos soirées <span class="gradient-text">en sécurité</span></h1>
                 <p class="hero-subtitle">Stay Sharp. Stay Safe. <i class="fas fa-moon"></i></p>
                 <p class="hero-description">Night Watch rend vos soirées plus amusantes et sécurisées avec vos amis. Éthylomètre partagé, boutons d'urgence, localisation, stories et bien plus encore.</p>
@@ -73,6 +86,7 @@
     <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
+            <div class="section-sep"></div>
             <h2 class="section-title">Tout ce que vous adorez</h2>
             <p class="section-subtitle">Des fonctionnalités pensées pour vos soirées</p>
             
@@ -131,6 +145,7 @@
     <!-- FAQ Section -->
     <section class="faq" id="faq">
         <div class="container">
+            <div class="section-sep"></div>
             <h2 class="section-title">Questions Fréquentes</h2>
             <p class="section-subtitle">Tout ce que vous voulez savoir</p>
             
@@ -191,6 +206,7 @@
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
         <div class="container">
+            <div class="section-sep"></div>
             <h2 class="section-title">Ce que disent nos utilisateurs</h2>
             <p class="section-subtitle">Des avis sincères de la communauté Night Watch</p>
             

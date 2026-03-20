@@ -69,7 +69,80 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// ==================== FAQ INTERACTIVE ==================== 
+// ==================== SHARE BUTTON ====================
+
+const shareBtn = document.getElementById('share-btn');
+
+if (shareBtn) {
+    shareBtn.addEventListener('click', async () => {
+        const shareData = {
+            title: 'Night Watch – Stay Sharp. Stay Safe.',
+            text: 'Découvre Night Watch, l\'app qui rend tes soirées plus sûres avec tes amis 🌙',
+            url: 'https://morganrht.github.io/Landing-Page-NightWatch/'
+        };
+
+        // Web Share API – natif sur iOS Safari & Android Chrome
+        if (navigator.share) {
+            try {
+                await navigator.share(shareData);
+            } catch (err) {
+                // L'utilisateur a annulé ou erreur – ne rien faire
+            }
+        } else {
+            // Fallback : copier le lien dans le presse-papier
+            try {
+                await navigator.clipboard.writeText(shareData.url);
+                showToast('Lien copié dans le presse-papier !');
+            } catch (err) {
+                // Dernier recours : sélection manuelle
+                showToast('Copiez ce lien : ' + shareData.url);
+            }
+        }
+    });
+}
+
+function showToast(message) {
+    const existing = document.getElementById('share-toast');
+    if (existing) existing.remove();
+
+    const toast = document.createElement('div');
+    toast.id = 'share-toast';
+    toast.textContent = message;
+    toast.style.cssText = `
+        position: fixed;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(168, 85, 247, 0.9);
+        backdrop-filter: blur(12px);
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        border-radius: 999px;
+        font-size: 0.9rem;
+        font-family: inherit;
+        z-index: 9999;
+        box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+        animation: toastIn 0.3s ease;
+    `;
+
+    // Ajoute l'animation keyframe si pas déjà présente
+    if (!document.getElementById('toast-style')) {
+        const style = document.createElement('style');
+        style.id = 'toast-style';
+        style.textContent = `
+            @keyframes toastIn {
+                from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+                to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3000);
+}
+
+// ==================== FAQ INTERACTIVE ====================
 
 document.addEventListener('DOMContentLoaded', () => {
     const faqItems = document.querySelectorAll('.faq-item');

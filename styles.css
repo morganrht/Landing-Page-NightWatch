@@ -442,10 +442,14 @@ a:hover { color: var(--violet); }
 }
 
 .hero-visual {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     order: 1;
+}
+
+@media (min-width: 768px) {
+    .hero-visual { display: flex; }
 }
 
 /* iPhone Mockup */

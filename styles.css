@@ -774,6 +774,58 @@ a:hover {
 .mb-lg { margin-bottom: var(--spacing-lg); }
 .mb-xl { margin-bottom: var(--spacing-xl); }
 
+/* ==================== SOCIAL MEDIA ICONS ==================== */
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-links i {
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover i {
+    transform: scale(1.2) translateY(-2px);
+}
+
+/* Instagram */
+.social-links a[href*="instagram"] i {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Twitter/X */
+.social-links a[href*="twitter"] i {
+    color: #000;
+}
+
+.social-links a[href*="twitter"] i:hover {
+    color: var(--primary-light);
+}
+
+/* LinkedIn */
+.social-links a[href*="linkedin"] i {
+    color: #0a66c2;
+}
+
+.social-links a[href*="linkedin"]:hover i {
+    color: #054399;
+}
+
+/* Email */
+.social-links a[href^="mailto"] i {
+    color: var(--primary);
+}
+
+.social-links a[href^="mailto"]:hover i {
+    color: var(--accent);
+}
+
 /* ==================== ACCESSIBILITY ==================== */
 @media (prefers-reduced-motion: reduce) {
     * {
